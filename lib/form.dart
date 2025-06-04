@@ -41,7 +41,11 @@ class _MyFormState extends State<MyForm> {
         padding: const EdgeInsets.all(20.0),
         child: ListView(
           children: [
-            
+            MyTextField(
+              myController: _proveedorController,
+              fieldName: "Proveedor",
+              myIcon: Icons.business,
+            ),
             const SizedBox(height: 10),
             MyTextField(
               myController: _nombreController,
@@ -95,6 +99,7 @@ class _MyFormState extends State<MyForm> {
           context,
           MaterialPageRoute(builder: (context) {
             return Details(
+              proveedor: _proveedorController.text,
               nombre: _nombreController.text,
               telefono: _telefonoController.text,
               producto: _productoController.text,
