@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Details extends StatelessWidget {
+  final String proveedor;
   final String nombre;
   final String telefono;
   final String producto;
@@ -10,6 +11,7 @@ class Details extends StatelessWidget {
 
   const Details({
     Key? key,
+    required this.proveedor,
     required this.nombre,
     required this.telefono,
     required this.producto,
@@ -50,6 +52,7 @@ class Details extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Text(
                   '''
+Proveedor: $proveedor
 Nombre: $nombre
 Teléfono: $telefono
 Producto: $producto
